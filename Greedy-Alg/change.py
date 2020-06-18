@@ -1,3 +1,12 @@
+'''
+denominations= 1,5,10
+sample input:
+21
+
+sample output:
+3
+'''
+
 n=int(input())
 count=0 
 if(n>=10):
