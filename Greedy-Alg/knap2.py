@@ -1,3 +1,19 @@
+'''Fractional Knapsack problem
+sort according to density using merge sort to reduce time complexity ---> O(n^2) to O(nlogn)
+sample input:
+3 50                                                                                                                                          
+60 20                                                                                                                                         
+100 50                                                                                                                                        
+120 30   
+
+sample output:
+180.0
+
+
+first line takes n and W
+next n lines take values and weights
+'''
+
 import numpy as np
 global n
 n, W= map(int, input().split()) 
