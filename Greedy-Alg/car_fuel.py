@@ -1,3 +1,20 @@
+'''this algorithm gives the minimum number of refills needed for a car with mileage 'tank' to travel from 0 to 'dest'
+the number of intermideate fuel stops = n
+
+Sample input:
+950                                                                                                                                           
+400                                                                                                                                           
+4                                                                                                                                             
+200 375 550 750
+
+Sample output:
+2
+
+
+returns -1 if not possible
+'''
+
+
 def minRefill(x,n,L):
     if(x[len(x)-1]<L):
         return 0
