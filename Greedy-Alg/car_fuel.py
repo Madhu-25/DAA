@@ -15,19 +15,23 @@ returns -1 if not possible
 '''
 
 
-def minRefill(x,n,L):
+def minRefill(x,n,L,dest):
     if(x[len(x)-1]<L):
         return 0
     numRefills=0
     currRefill=0
+    l=[]
     while(currRefill<=n):
         lastRefill=currRefill
         while(currRefill<=n and (x[currRefill+1]-x[lastRefill])<=L):
+            
             currRefill+=1 
         if(currRefill==lastRefill):
             return -1
         if(currRefill<=n):
+            l.append(x[currRefill])
             numRefills+=1 
+    print(l)
     return numRefills
     
 dest=int(input())
@@ -36,4 +40,4 @@ n=int(input())
 x=[0]
 x+=[int(i) for i in input().split()]
 x.append(dest)
-print(minRefill(x,n,tank))
+print(minRefill(x,n,tank,dest))
